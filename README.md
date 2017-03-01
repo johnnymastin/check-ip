@@ -46,7 +46,7 @@ Methods
 
 Examples
 ========
-Example of an IP address being tested as a valid public IP address:
+Working example of an IP address being tested as a valid public IP address (copy this first code snippet, save in a file and use for testing):
 ```javascript
 var checkIp = require('check-ip');
 var ipAddress = '8.8.8.8';
