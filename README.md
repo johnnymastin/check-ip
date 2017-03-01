@@ -1,4 +1,5 @@
 check-ip 
+[![Known Vulnerabilities](https://snyk.io/test/github/johnnymastin/check-ip/badge.svg)](https://snyk.io/test/github/johnnymastin/check-ip)
 =========
 A simple module that will take an IP address as input and perform the following:
  - Validate the IP address for proper format and number range
