@@ -1,0 +1,45 @@
+{
+  "name": "check-ip",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Johnny Mastin <Johnny.Mastin@gmail.com (https://github.com/johnnymastin)",
+  "description": "Code that will validate an IP address for correct format and give additional information about the type of IP address.",
+  "keywords": [
+    "ip",
+    "ip address",
+    "validate ip",
+    "ip validator",
+    "ip validate",
+    "check ip",
+    "ip check",
+    "ip checker",
+    "devops",
+    "automate",
+    "automation",
+    "multicast",
+    "bogon",
+    "apipa",
+    "rfc1918",
+    "public ip",
+    "private ip",
+    "cidr",
+    "aardvark",
+    "bot"
+  ],
+  "homepage": "https://github.com/johnnymastin/check-ip",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnymastin/check-ip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnnymastin/check-ip/issues",
+    "email": "Johnny.Mastin@gmail.com"
+  },
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "check-ip.js",
+  "dependencies": {
+    "ip-range-check": "^0.0.2"
+  }
+}
