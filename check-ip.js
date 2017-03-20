@@ -2,18 +2,7 @@
 
 var ipRangeCheck = require("ip-range-check");
 
-var validRegEx = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/,
-    boiledArray = [],
-    answer = {
-        originalIp: false,
-        boiledIp: false,
-        isValid: false,
-        isBogon: false,
-        isApipa: false,
-        isMulticast: false,
-        isRfc1918: false,
-        isPublicIp: false
-    };
+var validRegEx = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/;
 
 // Bogons list from http://www.team-cymru.org/bogon-reference.html
 var bogonsArray = [ "0.0.0.0/8","10.0.0.0/8","100.64.0.0/10","127.0.0.0/8","169.254.0.0/16",
@@ -23,9 +12,20 @@ var bogonsArray = [ "0.0.0.0/8","10.0.0.0/8","100.64.0.0/10","127.0.0.0/8","169.
 // Private IP list.  Common RFC1918 IP addresses from https://tools.ietf.org/html/rfc1918
 var privateIpArray = [ "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16" ];
 
+
 function checkIp(ip){
-    // Set originalIp
-    answer.originalIp = ip;
+    // Set originalIp and reset other properties of answer.
+    var boiledArray = [];
+    var answer = {
+        originalIp: ip,
+        boiledIp: false,
+        isValid: false,
+        isBogon: false,
+        isApipa: false,
+        isMulticast: false,
+        isRfc1918: false,
+        isPublicIp: false
+    };
 
     // Check to see if it is valid as per RegEx.
     if (validRegEx.test(ip)) {
