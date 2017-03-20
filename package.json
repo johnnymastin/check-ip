@@ -1,6 +1,6 @@
 {
   "name": "check-ip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Johnny Mastin <Johnny.Mastin@gmail.com (https://github.com/johnnymastin)",
   "description": "Code that will validate an IP address for correct format and give additional information about the type of IP address.",
