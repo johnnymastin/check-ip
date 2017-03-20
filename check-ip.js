@@ -2,7 +2,8 @@
 
 var ipRangeCheck = require("ip-range-check");
 
-var validRegEx = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/;
+var validRegEx = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
 
 // Bogons list from http://www.team-cymru.org/bogon-reference.html
 var bogonsArray = [ "0.0.0.0/8","10.0.0.0/8","100.64.0.0/10","127.0.0.0/8","169.254.0.0/16",
