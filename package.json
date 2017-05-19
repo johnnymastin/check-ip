@@ -35,11 +35,15 @@
     "url": "https://github.com/johnnymastin/check-ip/issues",
     "email": "Johnny.Mastin@gmail.com"
   },
-    "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {
+    "test": "mocha || true"
   },
   "main": "check-ip.js",
   "dependencies": {
     "ip-range-check": "^0.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
   }
 }
