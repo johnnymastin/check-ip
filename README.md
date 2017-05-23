@@ -86,3 +86,9 @@ if (!response.isValid) {
   isRfc1918: true,
   isPublicIp: false }
 ```
+Testing
+=======
+Run automated tests for Node.js:
+```
+npm run test
+```
